@@ -4,6 +4,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
+# import org.openqa.selenium.WebElement
 import time, colorama
 from colorama import Fore
 colorama.init()
@@ -23,11 +24,10 @@ def prog(url):
 	driver.get(url) # Opens URL in browser
 	print('_______________________________________________________________________________________________________')
 
-	# WebDriverWait(driver, 1000).until(EC.element_to_be_clickable((By.CLASS_NAME,''))).click() # Wait until logged in then click specified chat
-	WebDriverWait(driver, 1000).until(EC.element_to_be_clickable((By.XPATH,"//*[contains(., 'testing')]"))).click() # Wait until logged in then click specified chat
+	WebDriverWait(driver, 1000).until(EC.element_to_be_clickable((By.XPATH,'//*[@id="pane-side"]/div[2]/div/div/div[3]/div/div/div[2]'))).click() # Wait until logged in then click first chat
 	WebDriverWait(driver, 30).until(EC.element_to_be_clickable((By.XPATH,'//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]'))).click() # Click message entry box
 
-
+	# WebElement messagebox = 
 	n = 1
 	for loop in range(10):
 		messagebox = driver.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]') # selects messagebox
