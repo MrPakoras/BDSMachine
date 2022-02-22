@@ -31,7 +31,7 @@ def prog(url):
 	n = 1
 	for loop in range(10):
 		messagebox = driver.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]') # selects messagebox
-		messagebox.send_keys(f'test {n}') # type text
+		messagebox.send_keys(f'@بلاٰل') # type text
 		messagebox.send_keys(Keys.ENTER) # press enter button to send message
 		n +=1
 
